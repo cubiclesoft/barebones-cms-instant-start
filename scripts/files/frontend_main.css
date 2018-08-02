@@ -1,0 +1,33 @@
+html, body { margin: 0; padding: 0; height: 100%; }
+body { font-family: Veranda, Arial, Helvetica, sans-serif; color: #222222; box-sizing: border-box; }
+
+a { color: #4E88C2; text-decoration: none; }
+a:hover { color: #297ACC; text-decoration: underline; }
+div-embed { display: block; }
+
+.contentwrap { font-size: 1.2em; margin: 0 auto; max-width: 920px; line-height: 1.8; min-height: 50%; }
+.contentwrapinner { padding: 0 1em 1em 1em; }
+
+.contentwrapinner h1, h2, h3, h4, h5, h6 { margin-bottom: 0.5em; }
+
+.contentwrap.fancycontent :first-child { margin-top: 0.5em; }
+.contentwrap.fancycontent h2 { text-align: center; font-size: 2.1em; font-weight: bold; }
+
+@media (max-width: 640px) {
+	body { font-size: 0.9em; }
+	.contentwrap.fancycontent h2 { font-size: 1.5em; }
+}
+
+.contentwrapinner img, .contentwrapinner a img { max-width: 100%; }
+.contentwrapinner > img:not(.no-break), .contentwrapinner > a img:not(.no-break) { display: block; max-width: calc(100% + 2em); margin: 1em -1em 0; }
+
+.contentwrap.fancycontent .contentwrapinner > img { margin-top: 2.5em; }
+.contentwrap.fancycontent .contentwrapinner > img + h1, .contentwrap.fancycontent .contentwrapinner > img + h2, .contentwrap.fancycontent .contentwrapinner > img + h3,
+.contentwrap.fancycontent .contentwrapinner > img + h4, .contentwrap.fancycontent .contentwrapinner > img + h5, .contentwrap.fancycontent .contentwrapinner > img + h6 { margin-top: 0.5em; }
+
+.contentwrapinner div-embed { margin: 1em 0; }
+.contentwrapinner > div-embed:not(.no-break) { max-width: calc(100% + 2em); margin: 1em -1em 0; }
+
+.contentwrap.fancycontent .contentwrapinner > div-embed { margin-top: 2.5em; }
+.contentwrap.fancycontent .contentwrapinner > div-embed + h1, .contentwrap.fancycontent .contentwrapinner > div-embed + h2, .contentwrap.fancycontent .contentwrapinner > div-embed + h3,
+.contentwrap.fancycontent .contentwrapinner > div-embed + h4, .contentwrap.fancycontent .contentwrapinner > div-embed + h5, .contentwrap.fancycontent .contentwrapinner > div-embed + h6 { margin-top: 0.5em; }
