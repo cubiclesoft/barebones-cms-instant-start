@@ -3,7 +3,7 @@ Barebones CMS Instant Start
 
 Quickly install all components of Barebones CMS in just a couple of minutes.  Instant Start is useful for setting up a more permanent installation for anyone just wanting to get started right away, set up a demo/test site without a time limit, and/or play with new plugins/extensions away from a production environment.
 
-Creating a new server is highly recommended.  Any Debian-based Linux distribution will probably work fine.  Failure to use Instant Start on a newly created system may result in damage to configuration files and/or data loss.
+Creating a new server is highly recommended.  Any Debian-based Linux distribution will probably work fine.  Failure to use Instant Start on a newly created system may result in damage to existing configuration files and/or data loss.
 
 Features
 --------
