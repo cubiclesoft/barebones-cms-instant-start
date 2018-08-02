@@ -72,7 +72,7 @@ DigitalOcean is primarily for quickly setting up a Internet-facing server.  Web 
 
 Running a VPS (or similar) comes with responsbilities.  The biggest one is making sure the system is secure, which means that the system remains fully patched because it won't be done automatically.  However, the ability to do anything on the system as the `root` user usually far outweighs the extra responsibilities that come with it.
 
-If the intent is to run Barebones CMS long-term, I highly recommend using a [OVH VPS](https://www.ovh.com/world/vps/vps-ssd.xml) over DigitalOcean.  They offer a lot more hardware for less cost but slightly less comprehensive technical support.  Barebones CMS has no problem running on a OVH VPS SSD 1 instance.  The script under the Getting Started section can be manually modified to set `PUBLIC_IPV4` and then run as `root`.
+If the intent is to run Barebones CMS long-term, I highly recommend using a [OVH VPS](https://www.ovh.com/world/vps/vps-ssd.xml) instead of DigitalOcean.  They offer a lot more hardware for less cost but slightly less comprehensive technical support.  Barebones CMS has no problem running on a OVH VPS SSD 1 instance.  The script under the Getting Started section can be manually modified to set `PUBLIC_IPV4` and then run as `root`.
 
 More Information
 ----------------
