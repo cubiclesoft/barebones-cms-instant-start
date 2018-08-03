@@ -394,4 +394,14 @@
 	}
 
 	@system("service cloud-storage-server-internal restart");
+
+
+	// Generate a README file for the root directory.
+	$data = "Barebones CMS was installed successfully.  Access the admin interface here:\n\n";
+	$data .= "http://" . (getenv("PUBLIC_IPV4") != "" ? getenv("PUBLIC_IPV4") : "127.0.0.1") . "/admin-" . $installconfig["admindir"] . "/\n\n";
+	$data .= "Create a new story, add a tag called '/' (without the quotes), and save the content.\n\nThen visit the website:\n\n";
+	$data .= "http://" . (getenv("PUBLIC_IPV4") != "" ? getenv("PUBLIC_IPV4") : "127.0.0.1") . "/\n";
+
+	file_put_contents("/root/README-BarebonesCMS", $data);
+	@chmod("/root/README-BarebonesCMS", 0600);
 ?>

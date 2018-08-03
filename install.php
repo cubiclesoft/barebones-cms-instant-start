@@ -28,6 +28,8 @@
 	// Now that the environment is normalized, run the main script.
 	system(escapeshellarg(PHP_BINARY) . " " . escapeshellarg($rootpath . "/scripts/main.php"));
 
+	echo "\nInstallation complete.\n";
+
 	// Reboot automatically as needed.
 	if (file_exists("/var/run/reboot-required"))  system("reboot");
 
