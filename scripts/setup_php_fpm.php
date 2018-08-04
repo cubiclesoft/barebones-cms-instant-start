@@ -13,8 +13,8 @@
 
 	require_once $rootpath2 . "/functions.php";
 
-	@system("/usr/bin/apt update");
-	@system("/usr/bin/apt -y install php-fpm");
+	@system("/usr/bin/apt-get update");
+	@system("/usr/bin/apt-get -y install php-fpm");
 
 	if (!is_dir("/etc/php"))  CLI::DisplayError("The directory '/etc/php/' does not exist.");
 

@@ -29,9 +29,9 @@ Under "Select additional options" check the checkbox that says "User data".  Cop
 
 export DEBIAN_FRONTEND=noninteractive;
 
-apt -y update;
-apt -y dist-upgrade;
-apt -y install openssl git curl php-cli;
+apt-get -y update;
+apt-get -y dist-upgrade;
+apt-get -y install openssl git curl php-cli;
 
 export PUBLIC_IPV4=$(curl -s http://169.254.169.254/metadata/v1/interfaces/public/0/ipv4/address);
 

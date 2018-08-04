@@ -22,8 +22,8 @@
 	// Note that Nginx is not installed here.
 	// The release found in the official Ubuntu/Debian repositories is mostly unsupported software by the Nginx community.
 	if (!file_exists("/etc/apt/sources.list"))  CLI::DisplayError("The file '/etc/apt/sources.list' does not exist.  Not actually Debian-based?");
-	system("/usr/bin/apt update");
-	system("/usr/bin/apt -y install iptables-persistent fail2ban openssl git php-gd php-json php-sqlite3 php-curl");
+	system("/usr/bin/apt-get update");
+	system("/usr/bin/apt-get -y install iptables-persistent fail2ban openssl git php-gd php-json php-sqlite3 php-curl");
 
 	// Now that the environment is normalized, run the main script.
 	system(escapeshellarg(PHP_BINARY) . " " . escapeshellarg($rootpath . "/scripts/main.php"));

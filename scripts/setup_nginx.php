@@ -36,7 +36,7 @@
 
 	// Run apt update to gather the required GPG key.
 	ob_start();
-	@system("/usr/bin/apt update 2>&1");
+	@system("/usr/bin/apt-get update 2>&1");
 	$data = ob_get_contents();
 	ob_end_clean();
 
@@ -49,11 +49,11 @@
 		{
 			$pubkey = trim(substr($line, $pos2 + 10));
 			@system("/usr/bin/apt-key adv --keyserver keyserver.ubuntu.com --recv-keys " . $pubkey);
-			@system("/usr/bin/apt update");
+			@system("/usr/bin/apt-get update");
 		}
 	}
 
-	@system("/usr/bin/apt -y install nginx");
+	@system("/usr/bin/apt-get -y install nginx");
 
 	// Create a stronger ephemeral key exchange for SSL (this process can take several minutes).
 	if (!file_exists("/var/local/dhparam2048.pem"))  @system("openssl dhparam -out /var/local/dhparam2048.pem 2048");
