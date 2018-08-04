@@ -29,7 +29,7 @@ Under "Select additional options" check the checkbox that says "User data".  Cop
 
 export DEBIAN_FRONTEND=noninteractive;
 
-apt-get -y update;
+apt-get update;
 apt-get -y dist-upgrade;
 apt-get -y install openssl git curl php-cli;
 
