@@ -1,6 +1,6 @@
 <?php
 	// Handle processing incoming feed data for Instant Start installations.
-	// (C) 2018 CubicleSoft.  All Rights Reserved.
+	// (C) 2020 CubicleSoft.  All Rights Reserved.
 
 	if (!isset($_SERVER["argc"]) || !$_SERVER["argc"])
 	{
@@ -33,7 +33,7 @@
 			{
 				if (substr($tag, 0, 2) === "*/")  $tag = substr($tag, 1);
 
-				if ($tag{0} === "/")
+				if ($tag[0] === "/")
 				{
 					while (!isset($tags[$tag]))
 					{

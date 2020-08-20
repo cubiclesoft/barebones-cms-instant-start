@@ -10,7 +10,7 @@
 	// Calculate the tag to retrieve based on the current URL.
 	$tag = Request::GetURLBase();
 	if (strncasecmp($tag, $config["tag_base_path"], strlen($config["tag_base_path"])) == 0)  $tag = substr($tag, strlen($config["tag_base_path"]));
-	if ($tag === "" || $tag{0} !== "/")  $tag = "/" . $tag;
+	if ($tag === "" || $tag[0] !== "/")  $tag = "/" . $tag;
 
 	// Redirect when there is no trailing slash for SEO purposes.
 	if (substr($tag, -1) !== "/")

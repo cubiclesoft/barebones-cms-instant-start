@@ -10,7 +10,7 @@
 	// Calculate the tag to retrieve based on the current URL.
 	$tag = Request::GetURLBase();
 	if (strncasecmp($tag, $config["tag_base_path"], strlen($config["tag_base_path"])) == 0)  $tag = substr($tag, strlen($config["tag_base_path"]));
-	if ($tag === "" || $tag{0} !== "/")  $tag = "/" . $tag;
+	if ($tag === "" || $tag[0] !== "/")  $tag = "/" . $tag;
 
 	// Create the options array.
 	if (substr($tag, -1) === "/")
@@ -122,7 +122,7 @@
 				// Rebuild all associated sections.
 				foreach ($asset["tags"] as $tag2)
 				{
-					if ($tag2{0} !== "/")  continue;
+					if ($tag2[0] !== "/")  continue;
 
 					while (!isset($processed[$tag2]))
 					{
