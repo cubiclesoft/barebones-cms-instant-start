@@ -5,6 +5,8 @@ Quickly install all components of Barebones CMS in just a couple of minutes.  In
 
 Creating a new server is highly recommended.  Any Debian-based Linux distribution will probably work fine.  Failure to use Instant Start on a newly created system may result in damage to existing configuration files and/or data loss.
 
+[![Donate](https://cubiclesoft.com/res/donate-shield.png)](https://cubiclesoft.com/donate/) [![Discord](https://img.shields.io/discord/777282089980526602?label=chat&logo=discord)](https://cubiclesoft.com/product-support/github/)
+
 Features
 --------
 
