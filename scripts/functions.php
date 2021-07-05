@@ -1,7 +1,8 @@
 <?php
 	// Configuration file modifier functions.
-	// (C) 2018 CubicleSoft.  All Rights Reserved.
+	// (C) 2020 CubicleSoft.  All Rights Reserved.
 
+	// Callback function for UpdateConfFile() that skips the final data map.
 	function UpdateConfSkipFinal($line, &$datamap, $key, $separator, $val)
 	{
 		if ($line === false)
@@ -10,7 +11,6 @@
 
 			return;
 		}
-
 
 		if ($val === false)  $line = "";
 		else
@@ -23,6 +23,8 @@
 		return $line;
 	}
 
+	// Intakes a series of lines, data keys and values to use, separators (if any), and an optional callback for custom behavior.
+	// Returns a new set of lines.
 	function UpdateConfFile($lines, $datamap, $separator, $uncomment = false, $callback = false)
 	{
 		foreach ($lines as $num => $line)
@@ -96,6 +98,7 @@
 		return $lines;
 	}
 
+	// Intakes a series of lines and performs a series of regular expression matches.  Returns a new set of lines.
 	function UpdateConfFileRegEx($lines, $datamap)
 	{
 		foreach ($lines as $num => $line)
